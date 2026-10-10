@@ -1,7 +1,6 @@
-package estudosjava.cadastroninjas;
+package estudosjava.cadastroninjas.ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

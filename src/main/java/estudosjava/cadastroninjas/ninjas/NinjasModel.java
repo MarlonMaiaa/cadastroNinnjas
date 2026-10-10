@@ -1,9 +1,10 @@
-package estudosjava.cadastroninjas;
+package estudosjava.cadastroninjas.ninjas;
 
+import estudosjava.cadastroninjas.missoes.MissoesModel;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table (name = "tb_cadastro")
 public class NinjasModel {
 
     @Id
@@ -12,6 +13,11 @@ public class NinjasModel {
     private String nome;
     private int idade;
     private String email;
+
+    // @manytoone - um ninja tem uma unica missao
+    @ManyToOne
+    @JoinColumn (name = "missoes_id") // Foreing Key ou chave estrangeira
+    private MissoesModel missoes;
 
     public NinjasModel(String nome, int idade, String email) {
         this.nome = nome;
