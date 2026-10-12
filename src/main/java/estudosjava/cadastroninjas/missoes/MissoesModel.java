@@ -2,9 +2,14 @@ package estudosjava.cadastroninjas.missoes;
 
 import estudosjava.cadastroninjas.ninjas.NinjasModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 @Table (name = "tb_missoes")
 public class MissoesModel {
@@ -20,44 +25,9 @@ public class MissoesModel {
     private List <NinjasModel> ninjas;
 
 
-    public MissoesModel(long id, String nome, int idade, String rank) {
-        this.id = id;
-        this.nomeDamissao = nome;
-        this.idade = idade;
-        this.rank = rank;
-    }
 
-    public long getId() {
-        return id;
-    }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
-    public String getNomeDamissao() {
-        return nomeDamissao;
-    }
-
-    public void setNomeDamissao(String nomeDamissao) {
-        this.nomeDamissao = nomeDamissao;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
 }
 
 
