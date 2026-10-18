@@ -15,13 +15,14 @@ public class NinjasModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     private long id;
-
+    @Column (name = "name")
     private String nome;
-
+    @Column (name = "idade")
     private int idade;
 
-    @Column(unique = true)
+    @Column(name = "email",unique = true)
     private String email;
 
     // @manytoone - um ninja tem uma unica missao
